@@ -1,20 +1,27 @@
 import { Link } from "react-router-dom";
 import Button from "../Button/Button";
-
-interface Product {
-  id: number;
-  title: string;
-  price: number;
-  image: string;
-}
+import type { Product } from "../../types/Product";
+// interface Product {
+//   id: number;
+//   title: string;
+//   price: number;
+//   image: string[];
+//   description: string;
+//   oldPrice?: number;
+//   discount?:number;
+//   rating:number;
+//   category:string;
+//   reviewsCount:number;
+//   stock:number;
+// }
 
 interface ProductCardProps {
-  product: Product;
-  onAddToCart?: (product: Product) => void;
+  product: Product;  
+  onAddToCart?: (product: Product) => void; 
   onToggleWishlist?: (product: Product) => void;
   isInWishlist?: boolean;
 }
-
+ 
 export default function ProductCard({
   product,
   onAddToCart,
