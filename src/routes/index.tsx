@@ -1,6 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "../layouts/MainLayout";
 import Home from "../pages/Home";
+import Shop from "../pages/Shop";
+import Cart from "../pages/Cart";
 
 const router = createBrowserRouter([
   {
@@ -8,6 +10,9 @@ const router = createBrowserRouter([
     element: <MainLayout />,
     children: [{ index: true, element: <Home /> }],
   },
+  { path: "shop", element: <Shop /> },
+  {path: "/Cart", element:<Cart/>},
+
 ]);
 
 export default router;
