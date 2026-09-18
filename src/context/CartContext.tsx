@@ -10,9 +10,12 @@ interface CartContextType {
 const CartContext = createContext<CartContextType | undefined>(undefined);
 
 export function CartProvider({ children }: { children: React.ReactNode }) {
+
     const [cart, setCart] = useState<Product[]>([]);
 
     const addToCart = (product: Product) => {
+
+
         setCart((prevCart) => [...prevCart, product]);
     };
     
